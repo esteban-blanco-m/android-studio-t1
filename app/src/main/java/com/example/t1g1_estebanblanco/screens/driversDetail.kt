@@ -108,7 +108,7 @@ fun DriversDetail(
             }
 
             Row(modifier = Modifier.padding(vertical = 6.dp)) {
-                Text(text = "Team: ", fontSize = 18.sp, color = colorTeamC)
+                Text(text = "Team: ", fontSize = 18.sp, color = Color.Black)
                 Text(text = team ?: "", fontSize = 18.sp, color = colorTeamC)
             }
         }
