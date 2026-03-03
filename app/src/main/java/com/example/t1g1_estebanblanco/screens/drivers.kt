@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,11 +12,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.TagFaces
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -100,6 +103,16 @@ fun Drivers(
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold
                     )
+                }, navigationIcon = {
+                    IconButton(onClick = {
+                        controller.popBackStack()
+                    }) {
+                        Icon(
+                            imageVector = Icons.Default.KeyboardArrowLeft,
+                            contentDescription = "Volver",
+                            tint = Color.White
+                        )
+                    }
                 }, colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = colorResource(id = R.color.aquamarine),
                 )
@@ -109,14 +122,15 @@ fun Drivers(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(horizontal = 16.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+                .padding(horizontal = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            contentPadding = PaddingValues(vertical = 16.dp)
         ) {
             items(drivers) { driver ->
 
                 ElevatedCard(
                     colors = CardDefaults.elevatedCardColors(
-                        containerColor = Color(0xFFF8F4F8)
+                        containerColor = colorResource(id = R.color.aquamarine)
                     ), modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
@@ -147,7 +161,7 @@ fun Drivers(
                             Icons.Default.TagFaces, contentDescription = "piloto"
                         )
                         Text(
-                            text = driver.number.toString(), fontSize = 16.sp
+                            text = driver.number, fontSize = 16.sp
                         )
                         Text(
                             text = driver.name, fontSize = 16.sp
