@@ -59,7 +59,7 @@ fun HomeScreen(navController: NavController) {
                 .weight(1f)
                 .fillMaxWidth()
                 .clickable {
-                    navController.navigate("F1")
+                    navController.navigate(AppScreens.Drivers.name)
                 },
 
             horizontalAlignment = Alignment.CenterHorizontally,
