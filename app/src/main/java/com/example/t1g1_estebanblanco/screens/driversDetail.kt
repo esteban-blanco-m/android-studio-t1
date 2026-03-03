@@ -52,26 +52,26 @@ fun DriversDetail(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        text = "Detalle del Piloto",
-                        fontSize = 25.sp,
-                        fontWeight = FontWeight.Bold,
-                    )
-                }, navigationIcon = {
-
-                    IconButton(onClick = {
-                        controller.popBackStack()
-                    }) {
-                        Icon(
-                            imageVector = Icons.Default.ArrowBackIosNew,
-                            contentDescription = "Volver"
-                        )
-                    }
-                }, colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = colorResource(id = R.color.aquamarine),
-                    titleContentColor = Color.White,
-                    navigationIconContentColor = Color.White
+                Text(
+                    text = "Detalle del Piloto",
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
                 )
+            }, navigationIcon = {
+
+                IconButton(onClick = {
+                    controller.popBackStack()
+                }) {
+                    Icon(
+                        imageVector = Icons.Default.ArrowBackIosNew,
+                        contentDescription = "Volver"
+                    )
+                }
+            }, colors = TopAppBarDefaults.topAppBarColors(
+                containerColor = colorResource(id = R.color.aquamarine),
+                titleContentColor = Color.White,
+                navigationIconContentColor = Color.White
+            )
             )
         }) { paddingValues ->
 

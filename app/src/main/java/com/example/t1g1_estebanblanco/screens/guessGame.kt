@@ -64,29 +64,29 @@ fun GuessGame(navController: NavController) {
     Scaffold(topBar = {
         TopAppBar(
             title = {
-                Column {
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Text(
-                        text = "Adivina El Número", fontSize = 25.sp, fontWeight = FontWeight.Bold
-                    )
-                    Spacer(modifier = Modifier.height(1.dp))
-                    Text(
-                        text = "Intenta adivinar el número aleatorio",
-                        fontSize = 17.sp,
-                        fontWeight = FontWeight.Light
-                    )
-                }
+            Column {
+                Spacer(modifier = Modifier.height(2.dp))
+                Text(
+                    text = "Adivina El Número", fontSize = 25.sp, fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(1.dp))
+                Text(
+                    text = "Intenta adivinar el número aleatorio",
+                    fontSize = 17.sp,
+                    fontWeight = FontWeight.Light
+                )
+            }
 
-            }, navigationIcon = {
-                IconButton(onClick = {
-                    navController.popBackStack()
-                }) {
-                    Icon(
-                        imageVector = Icons.Default.ArrowBackIosNew,
-                        contentDescription = "Volver a home"
-                    )
-                }
-            },
+        }, navigationIcon = {
+            IconButton(onClick = {
+                navController.popBackStack()
+            }) {
+                Icon(
+                    imageVector = Icons.Default.ArrowBackIosNew,
+                    contentDescription = "Volver a home"
+                )
+            }
+        },
 
             colors = TopAppBarColors(
                 containerColor = colorResource(id = R.color.aquamarine),

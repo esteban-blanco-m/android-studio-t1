@@ -48,8 +48,7 @@ fun HomeScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "¡Adivina el número!", fontSize = 20.sp,
-                modifier = Modifier.weight(0.2f)
+                text = "¡Adivina el número!", fontSize = 20.sp, modifier = Modifier.weight(0.2f)
             )
         }
 
@@ -78,8 +77,7 @@ fun HomeScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = "Pilotos F1", fontSize = 20.sp,
-                modifier = Modifier.weight(0.2f)
+                text = "Pilotos F1", fontSize = 20.sp, modifier = Modifier.weight(0.2f)
 
             )
         }

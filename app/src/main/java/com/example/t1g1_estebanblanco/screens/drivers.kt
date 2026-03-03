@@ -98,25 +98,25 @@ fun Drivers(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        text = "F1 Drivers 2025",
-                        color = Color.White,
-                        fontSize = 25.sp,
-                        fontWeight = FontWeight.Bold
-                    )
-                }, navigationIcon = {
-                    IconButton(onClick = {
-                        controller.popBackStack()
-                    }) {
-                        Icon(
-                            imageVector = Icons.Default.ArrowBackIosNew,
-                            contentDescription = "Volver",
-                            tint = Color.White
-                        )
-                    }
-                }, colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = colorResource(id = R.color.aquamarine),
+                Text(
+                    text = "F1 Drivers 2025",
+                    color = Color.White,
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold
                 )
+            }, navigationIcon = {
+                IconButton(onClick = {
+                    controller.popBackStack()
+                }) {
+                    Icon(
+                        imageVector = Icons.Default.ArrowBackIosNew,
+                        contentDescription = "Volver",
+                        tint = Color.White
+                    )
+                }
+            }, colors = TopAppBarDefaults.topAppBarColors(
+                containerColor = colorResource(id = R.color.aquamarine),
+            )
             )
         }) { paddingValues ->
         LazyColumn(
