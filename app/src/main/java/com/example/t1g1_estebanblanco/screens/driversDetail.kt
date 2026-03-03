@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBackIosNew
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -53,7 +54,7 @@ fun DriversDetail(
                 title = {
                     Text(
                         text = "Detalle del Piloto",
-                        fontSize = 20.sp,
+                        fontSize = 25.sp,
                         fontWeight = FontWeight.Bold,
                     )
                 }, navigationIcon = {
@@ -62,7 +63,7 @@ fun DriversDetail(
                         controller.popBackStack()
                     }) {
                         Icon(
-                            imageVector = Icons.Default.KeyboardArrowLeft,
+                            imageVector = Icons.Default.ArrowBackIosNew,
                             contentDescription = "Volver"
                         )
                     }
