@@ -52,12 +52,12 @@ fun loadDrivers(
     val request = JsonArrayRequest(Request.Method.GET, url, null, { response ->
         for (i in 0 until response.length()) {
             val jsonObject = response.getJSONObject(i)
-            val number: String = jsonObject.getString("num_driv")
-            val name = jsonObject.getString("full_nam")
-            val acronym = jsonObject.getString("name_acron")
-            val team = jsonObject.getString("team_nam")
-            val image = jsonObject.getString("image_driv")
-            val teamColor = jsonObject.optString("team_col", "000000")
+            val number: String = jsonObject.getString("driver_number")
+            val name = jsonObject.getString("full_name")
+            val acronym = jsonObject.getString("name_acronym")
+            val team = jsonObject.getString("team_name")
+            val image = jsonObject.getString("headshot_url")
+            val teamColor = jsonObject.optString("team_colour", "000000")
             val driver = Driver(
                 number, name, acronym, team, image, teamColor
             )
